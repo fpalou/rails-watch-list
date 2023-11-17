@@ -1,0 +1,18 @@
+.poster-container{
+  position: relative;
+  display: inline-block;
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+}
+.poster-overlay{
+  position: absolute;
+  top: 1%;
+  left: 84%;
+  background-color: rgba(0, 0, 0, 0.058);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}

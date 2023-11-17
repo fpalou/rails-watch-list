@@ -1,0 +1,34 @@
+<h1>Lists#show</h1>
+<div class="container row">
+  <div class="container col-3 mt-2">
+    <div class="card card-bg-color" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= @list.name.capitalize %></h5>
+        <div class="d-flex justify-content-around">
+        <p><%= link_to "Edit info", edit_list_path(@list), {:class => "card-link"} %></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Movies</h3>
+<p><%= link_to "Add a new movie!", new_list_bookmark_path(@list), {:class => "card-link"} %></p>
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="card text-center text-bg-dark" style="width: 18rem;">
+    <div class="poster-container">
+      <img src=<%= "#{bookmark.movie.poster_url}" %> class="card-img-top" alt="...">
+      <div class="poster-overlay"><%= bookmark.movie.rating %> ⭐</div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= bookmark.movie.title %></h5>
+      <p class="card-text text-white-50"><%= bookmark.movie.overview %></p>
+      <hr>
+      <p class="card-text"><%= bookmark.comment %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <hr>
+      <div class="card-footer fw-lighter text-end" style="font-size: 12px;"><%= bookmark.created_at.strftime("Added on %m/%d/%Y") %></div>
+    </div>
+  </div>
+<% end %>
