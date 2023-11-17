@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #212529;
+  a {color:white;}
+  .topimg {
+    border-radius: 50%;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

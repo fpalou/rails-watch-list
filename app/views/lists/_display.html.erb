@@ -1,11 +1,11 @@
 <div class="container row">
   <% lists.each do |list| %>
     <div class="container col-3 mt-2">
-      <div class="card card-bg-color" style="width: 18rem;">
+      <div class="card card-bg-color card-index" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title"><%= list.name.capitalize %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">Whatever</h6>
-          <p><%= link_to "Details", list, {:class => "card-link"} %></p>
+          <h5 class="card-title text-center"><%= list.name.capitalize %></h5>
+          <h6 class="card-subtitle mb-2 text-muted text-white-50">Whatever</h6>
+          <p><%= link_to "See more", list, {:class => "card-link"} %></p>
         </div>
       </div>
     </div>
